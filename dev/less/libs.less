@@ -1,0 +1,74 @@
+@import 'vars.less';
+//@import 'pngSprite.less';
+@import (inline) '../libs/normalize/normalize.css';
+@import '../libs/slick/slick';
+@import '../libs/slick/slick-theme';
+@import (inline) '../libs/animatecss/animate.min.css';
+
+.slick {
+	&-prev {
+		display: block;
+		width: 45px;
+		height: 84px;
+		border-style: dashed;
+		border-width: 42px 0 42px 44px;
+		border-color: transparent transparent transparent #fff;
+		left: 0;
+		z-index: 2;
+		transition: opacity 0.3s linear;
+		&:before {
+			z-index: 2;
+			content: '';
+			position: absolute;
+			left: -48px;
+			top: -16px;
+			display: block;
+			width: 14px;
+			height: 36px;
+			background: url('../img/pngSprite/sprite.png') -37px 0 no-repeat;
+		}
+	}
+	&-next {
+		display: block;
+		width: 45px;
+		height: 84px;
+		border-style: dashed;
+		border-width: 42px 44px 42px 0;
+		border-color: transparent #fff transparent transparent;
+		right: -1px;
+		z-index: 2;
+		transition: opacity 0.3s linear;
+		&:before {
+			z-index: 2;
+			content: '';
+			position: absolute;
+			left: 33px;
+			top: -16px;
+			transform: rotate(180deg);
+			display: block;
+			width: 14px;
+			height: 36px;
+			background: url('../img/pngSprite/sprite.png') -37px 0 no-repeat;
+		}
+	}
+	&-slide {
+		outline: none;
+	}
+	&-dots {
+		width: auto;
+		right: 0;
+		bottom: -34px;
+		.slick-active {
+			color: @blueTextColor;
+		}
+		li {
+			margin: 0 -1px;
+			button {
+				&:before {
+					color: @grayTextColor;
+					font-size: 13px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,258 @@
+@media only screen and (max-width: 1500px) {
+	.top-banner {
+		background-position: -247px 0;
+	}
+}
+
+@media only screen and (max-width: 1180px) {
+	.wedding {
+		&-item {
+			&__left {
+				padding: 20px 4px 20px 4px;
+				width: 100%;
+				float: none;
+			}
+			&__right {
+				margin: 0 auto;
+				float: none;
+			}
+			&__slider {
+				margin: 0;
+				img {
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1170px) {
+	.header {
+		&__nav-list {
+			display: none;
+			//display: block;
+			margin-top: 10px;
+			border-top: 2px solid @blueTextColor;
+			border-bottom: 2px solid @blueTextColor;
+			li {
+				display: block;
+				text-align: center;
+				margin: 0;
+				padding: 0;
+				&:hover .header__dropdown {
+					left: 16%;
+				}
+				&:after {
+					content: '';
+					width: 0;
+					height: 4px;
+					transition: width 0.3s linear;
+				}
+				&:hover {
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						background-color: @blueTextColor;
+						height: 4px;
+						width: 100%;
+					}
+					&:after {
+						content: '';
+						position: absolute;
+						bottom: 0;
+						right: 0;
+						background-color: @blueTextColor;
+						height: 4px;
+						width: 100%;
+					}
+				}
+			}
+		}
+		&__dropdown {
+			width: 166px;
+			padding: 12px 0 16.4px;
+			top: 34px;
+			z-index: 1;
+			.dropdown__img {
+				border-left: none;
+			}
+			&:before {
+				content: none;
+			}
+			li {
+				margin: 0 0 10px;
+				&:hover .dropdown__img {
+					top: 100%;
+					left: 0;
+				}
+			}
+
+		}
+		&__gamburger {
+			display: block;
+		}
+	}
+
+	.dropdown__img {
+		border-left: 1px solid #fff;
+		position: absolute;
+		left: -9999px;
+		top: 0;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.37);
+		img {
+			display: block;
+		}
+	}
+
+	.other-wedding {
+		padding-bottom: 0;
+		&__item {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media only screen and (max-width: 1150px) {
+	.footer {
+		&__bottom {
+			padding-bottom: 0;
+			h2 {
+				margin-bottom: 20px;
+			}
+			&-item {
+				text-align: center;
+				display: block;
+				vertical-align: top;
+				width: 100%;
+				margin: 0 0 36px 0;
+				&--middle {
+					padding-left: 0;
+				}
+				&--last {
+					padding-left: 0;
+				}
+			}
+			&-list {
+				text-align: left;
+
+			}
+			&-social {
+				padding-left: 0;
+				display: block;
+				width: 255px;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 790px) {
+	.header {
+		&__nav-list {
+			li {
+				&:hover .header__dropdown {
+					left: 0;
+				}
+			}
+		}
+		&__dropdown {
+			padding: 5px 0;
+			li {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 790px) {
+	.other {
+		&-wedding {
+			&__img {
+				img {
+					width: 100%;
+				}
+			}
+			&__hover {
+				padding: 19px 27px 10px 23px;
+			}
+			&__item {
+				width: 100%;
+				display: block;
+				margin: 0 auto 50px;
+				&:last-child {
+					margin: 64px auto;
+				}
+			}
+		}
+	}
+
+	.header {
+		&__top {
+			margin-bottom: 0;
+		}
+		&__logo {
+			position: static;
+			float: none;
+			display: block;
+			width: 100%;
+			margin: 0 auto;
+			a {
+				display: block;
+			}
+			img {
+				display: block;
+				position: static;
+				margin: 0 auto 30px;
+			}
+		}
+		&__contacts {
+			float: none;
+			display: block;
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+}
+
+@media only screen and (max-width: 520px) {
+	.footer {
+		&__coppy {
+			&-right {
+				display: block;
+				margin: 0 auto;
+				text-align: center;
+				float: none;
+			}
+			&-left {
+				margin: 0 auto;
+				text-align: center;
+				display: block;
+			}
+		}
+	}
+
+	.wedding {
+		&-item {
+			&__right {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.header {
+		&__contacts {
+			&-btn {
+				display: block;
+				margin: 14px auto 0;
+			}
+			&-phone {
+				margin-right: 0;
+
+			}
+		}
+	}
+}

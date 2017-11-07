@@ -1,0 +1,1 @@
+{"version":3,"sources":["main-content.css"],"names":[],"mappings":"AAAA;EACE,+EAA+E;EAC/E,uBAAuB;EACvB,kBAAkB;CACnB","file":"main-content.css","sourcesContent":[".top-banner {\n  background: #515151 url(\"../img/general/top-banner-bg.jpg\") -247px 0 no-repeat;\n  background-size: cover;\n  min-height: 233px;\n}\n"]}

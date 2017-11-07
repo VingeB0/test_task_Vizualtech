@@ -1,0 +1,231 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@s-arrow-slider-name: 's-arrow-slider';
+@s-arrow-slider-x: 37px;
+@s-arrow-slider-y: 0px;
+@s-arrow-slider-offset-x: -37px;
+@s-arrow-slider-offset-y: 0px;
+@s-arrow-slider-width: 14px;
+@s-arrow-slider-height: 36px;
+@s-arrow-slider-total-width: 123px;
+@s-arrow-slider-total-height: 116px;
+@s-arrow-slider-image: 'sprite.png';
+@s-arrow-slider: 37px 0px -37px 0px 14px 36px 123px 116px 'sprite.png' 's-arrow-slider';
+@s-bottom-form-arrow-name: 's-bottom__form-arrow';
+@s-bottom-form-arrow-x: 90px;
+@s-bottom-form-arrow-y: 95px;
+@s-bottom-form-arrow-offset-x: -90px;
+@s-bottom-form-arrow-offset-y: -95px;
+@s-bottom-form-arrow-width: 8px;
+@s-bottom-form-arrow-height: 16px;
+@s-bottom-form-arrow-total-width: 123px;
+@s-bottom-form-arrow-total-height: 116px;
+@s-bottom-form-arrow-image: 'sprite.png';
+@s-bottom-form-arrow: 90px 95px -90px -95px 8px 16px 123px 116px 'sprite.png' 's-bottom__form-arrow';
+@s-fb-hover-name: 's-fb-hover';
+@s-fb-hover-x: 64px;
+@s-fb-hover-y: 95px;
+@s-fb-hover-offset-x: -64px;
+@s-fb-hover-offset-y: -95px;
+@s-fb-hover-width: 11px;
+@s-fb-hover-height: 21px;
+@s-fb-hover-total-width: 123px;
+@s-fb-hover-total-height: 116px;
+@s-fb-hover-image: 'sprite.png';
+@s-fb-hover: 64px 95px -64px -95px 11px 21px 123px 116px 'sprite.png' 's-fb-hover';
+@s-fb-name: 's-fb';
+@s-fb-x: 37px;
+@s-fb-y: 51px;
+@s-fb-offset-x: -37px;
+@s-fb-offset-y: -51px;
+@s-fb-width: 11px;
+@s-fb-height: 21px;
+@s-fb-total-width: 123px;
+@s-fb-total-height: 116px;
+@s-fb-image: 'sprite.png';
+@s-fb: 37px 51px -37px -51px 11px 21px 123px 116px 'sprite.png' 's-fb';
+@s-in-hover-name: 's-in-hover';
+@s-in-hover-x: 66px;
+@s-in-hover-y: 0px;
+@s-in-hover-offset-x: -66px;
+@s-in-hover-offset-y: 0px;
+@s-in-hover-width: 20px;
+@s-in-hover-height: 20px;
+@s-in-hover-total-width: 123px;
+@s-in-hover-total-height: 116px;
+@s-in-hover-image: 'sprite.png';
+@s-in-hover: 66px 0px -66px 0px 20px 20px 123px 116px 'sprite.png' 's-in-hover';
+@s-in-name: 's-in';
+@s-in-x: 66px;
+@s-in-y: 35px;
+@s-in-offset-x: -66px;
+@s-in-offset-y: -35px;
+@s-in-width: 20px;
+@s-in-height: 20px;
+@s-in-total-width: 123px;
+@s-in-total-height: 116px;
+@s-in-image: 'sprite.png';
+@s-in: 66px 35px -66px -35px 20px 20px 123px 116px 'sprite.png' 's-in';
+@s-mail-name: 's-mail';
+@s-mail-x: 101px;
+@s-mail-y: 66px;
+@s-mail-offset-x: -101px;
+@s-mail-offset-y: -66px;
+@s-mail-width: 14px;
+@s-mail-height: 14px;
+@s-mail-total-width: 123px;
+@s-mail-total-height: 116px;
+@s-mail-image: 'sprite.png';
+@s-mail: 101px 66px -101px -66px 14px 14px 123px 116px 'sprite.png' 's-mail';
+@s-other-wedding-hover-name: 's-other-wedding__hover';
+@s-other-wedding-hover-x: 0px;
+@s-other-wedding-hover-y: 0px;
+@s-other-wedding-hover-offset-x: 0px;
+@s-other-wedding-hover-offset-y: 0px;
+@s-other-wedding-hover-width: 22px;
+@s-other-wedding-hover-height: 80px;
+@s-other-wedding-hover-total-width: 123px;
+@s-other-wedding-hover-total-height: 116px;
+@s-other-wedding-hover-image: 'sprite.png';
+@s-other-wedding-hover: 0px 0px 0px 0px 22px 80px 123px 116px 'sprite.png' 's-other-wedding__hover';
+@s-phone-name: 's-phone';
+@s-phone-x: 113px;
+@s-phone-y: 95px;
+@s-phone-offset-x: -113px;
+@s-phone-offset-y: -95px;
+@s-phone-width: 5px;
+@s-phone-height: 16px;
+@s-phone-total-width: 123px;
+@s-phone-total-height: 116px;
+@s-phone-image: 'sprite.png';
+@s-phone: 113px 95px -113px -95px 5px 16px 123px 116px 'sprite.png' 's-phone';
+@s-pr-hover-name: 's-pr-hover';
+@s-pr-hover-x: 0px;
+@s-pr-hover-y: 95px;
+@s-pr-hover-offset-x: 0px;
+@s-pr-hover-offset-y: -95px;
+@s-pr-hover-width: 17px;
+@s-pr-hover-height: 21px;
+@s-pr-hover-total-width: 123px;
+@s-pr-hover-total-height: 116px;
+@s-pr-hover-image: 'sprite.png';
+@s-pr-hover: 0px 95px 0px -95px 17px 21px 123px 116px 'sprite.png' 's-pr-hover';
+@s-pr-name: 's-pr';
+@s-pr-x: 32px;
+@s-pr-y: 95px;
+@s-pr-offset-x: -32px;
+@s-pr-offset-y: -95px;
+@s-pr-width: 17px;
+@s-pr-height: 21px;
+@s-pr-total-width: 123px;
+@s-pr-total-height: 116px;
+@s-pr-image: 'sprite.png';
+@s-pr: 32px 95px -32px -95px 17px 21px 123px 116px 'sprite.png' 's-pr';
+@s-tw-hover-name: 's-tw-hover';
+@s-tw-hover-x: 101px;
+@s-tw-hover-y: 0px;
+@s-tw-hover-offset-x: -101px;
+@s-tw-hover-offset-y: 0px;
+@s-tw-hover-width: 22px;
+@s-tw-hover-height: 18px;
+@s-tw-hover-total-width: 123px;
+@s-tw-hover-total-height: 116px;
+@s-tw-hover-image: 'sprite.png';
+@s-tw-hover: 101px 0px -101px 0px 22px 18px 123px 116px 'sprite.png' 's-tw-hover';
+@s-tw-name: 's-tw';
+@s-tw-x: 101px;
+@s-tw-y: 33px;
+@s-tw-offset-x: -101px;
+@s-tw-offset-y: -33px;
+@s-tw-width: 22px;
+@s-tw-height: 18px;
+@s-tw-total-width: 123px;
+@s-tw-total-height: 116px;
+@s-tw-image: 'sprite.png';
+@s-tw: 101px 33px -101px -33px 22px 18px 123px 116px 'sprite.png' 's-tw';
+@spritesheet-width: 123px;
+@spritesheet-height: 116px;
+@spritesheet-image: 'sprite.png';
+@spritesheet-sprites: @s-arrow-slider @s-bottom-form-arrow @s-fb-hover @s-fb @s-in-hover @s-in @s-mail @s-other-wedding-hover @s-phone @s-pr-hover @s-pr @s-tw-hover @s-tw;
+@spritesheet: 123px 116px 'sprite.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}

@@ -1,0 +1,102 @@
+@import 'fonts.less';
+@import 'vars.less';
+// @import 'pngSprite.sass'
+@import 'mixins.less';
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	font-size: 16px;
+	line-height: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}
+
+textarea {
+	resize: none;
+}
+
+input,
+select,
+button {
+	outline: none;
+}
+
+ul, li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+body {
+	position: relative;
+	overflow-x: hidden;
+	min-width: 320px;
+	text-size-adjust: none;
+	-webkit-font-smoothing: antialiased;
+	font-family: @LucidaGrandeRegular, @familyFont;
+	font-size: 16px;
+	line-height: 1;
+	color: #000;
+	height: 100%;
+}
+
+.wrapper {
+	height: 100%;
+}
+
+.content {
+	box-sizing: border-box;
+	min-height: 100%;
+	padding-bottom: 52px;
+}
+
+.footer {
+	height: 313px;
+	margin-top: 10px;
+}
+
+.container {
+	position: relative;
+	width: 98%;
+	max-width: 1151px;
+	margin: 0 auto;
+}
+
+// Стили шапки
+@import 'modules/header.less';
+// Стили контента сайта
+@import 'libs.less';
+@import 'modules/wedding-ittem.less';
+// Стили футера
+@import 'modules/footer.less';
+// Стили медиазапросов
+@import 'media.less';

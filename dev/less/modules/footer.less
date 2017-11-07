@@ -1,0 +1,268 @@
+@import '../vars.less';
+@import '../mixins.less';
+
+::placeholder {
+	color: @coppyTextColor;
+}
+
+.footer {
+	position: relative;
+	border-top: 1px solid @borderNavColor;
+	text-align: center;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 4px;
+		left: 0;
+		height: 1px;
+		width: 100%;
+		background: @borderNavColor;
+	}
+	&__top {
+	}
+	&__social {
+		z-index: 1;
+		width: 155px;
+		background-color: #fff;
+		margin: -14px auto 43px;
+		&-item {
+			display: inline-block;
+			margin: 0 5px
+		}
+		&-link {
+			display: inline-block;
+			vertical-align: middle;
+			&--fb {
+				background: url('../img/pngSprite/sprite.png') -37px -51px no-repeat;
+				width: 11px;
+				height: 21px;
+				&:hover {
+					background: url('../img/pngSprite/sprite.png') -64px -95px no-repeat;
+				}
+			}
+			&--pr {
+				background: url('../img/pngSprite/sprite.png') -31px -93px no-repeat;
+				width: 17px;
+				height: 21px;
+				&:hover {
+					background: url('../img/pngSprite/sprite.png') 1px -93px no-repeat;
+				}
+			}
+			&--tw {
+				background: url('../img/pngSprite/sprite.png') -100px -28px no-repeat;
+				width: 22px;
+				height: 28px;
+				&:hover {
+					background: url('../img/pngSprite/sprite.png') -100px 5px no-repeat;
+				}
+			}
+			&--in {
+				background: url('../img/pngSprite/sprite.png') -65px -34px no-repeat;
+				width: 22px;
+				height: 22px;
+				&:hover {
+					background: url('../img/pngSprite/sprite.png') -65px 1px no-repeat;
+				}
+			}
+		}
+	}
+	&__bottom {
+		padding-bottom: 48px;
+		&-item {
+			text-align: left;
+			display: inline-block;
+			vertical-align: top;
+			width: 33%;
+			&--middle {
+				padding-left: 65px;
+				h2 {
+					margin: 0 0 1px 0;
+				}
+			}
+			&--last {
+				padding-left: 86px;
+				h2 {
+					margin: 0 0 2px 3px;
+				}
+			}
+			p {
+				margin: 0 0 6px 4px;
+				color: @coppyTextColor;
+				font: 13px/20px @LucidaGrandeRegular, @familyFont;
+			}
+			a {
+				display: block;
+				color: @coppyTextColor;
+				font: 13px/25px @LucidaGrandeRegular, @familyFont;
+				&:hover {
+					opacity: 0.7;
+				}
+				span {
+					margin-left: 6px;
+					font-family: @LucidaGrandeBold;
+					color: @blueTextColor;
+				}
+			}
+		}
+		&-social {
+			position: relative;
+			padding-left: 26px;
+			&--phone {
+				&:before {
+					content: '';
+					position: absolute;
+					top: 6px;
+					left: 7px;
+					display: inline-block;
+					background: url('../img/pngSprite/sprite.png') -113px -95px no-repeat;
+					width: 5px;
+					height: 16px;
+				}
+				&:hover {
+					&:before {
+						opacity: 0.7;
+					}
+				}
+			}
+			&--mail {
+				&:before {
+					content: '';
+					position: absolute;
+					top: 4px;
+					left: 2px;
+					display: inline-block;
+					background: url('../img/pngSprite/sprite.png') -101px -66px no-repeat;
+					width: 14px;
+					height: 14px;
+				}
+				&:hover {
+					&:before {
+						opacity: 0.7;
+					}
+				}
+			}
+		}
+		&-title {
+			margin: 0 0 4px 3px;
+			color: @otherWeddintTitle;
+			font: 17px/25px @LucidaGrandeRegular, @familyFont;
+			text-transform: uppercase;
+		}
+		&-list {
+			display: inline-block;
+			margin-right: 29px;
+			&:last-child {
+				margin-right: 0;
+			}
+			a {
+				display: block;
+				color: @coppyTextColor;
+				font: 13px/25px @LucidaGrandeRegular, @familyFont;
+				transition: 0.3s linear;
+				&:hover {
+					color: @orangeColor;
+				}
+			}
+		}
+		&-form {
+			&-title {
+				margin: 0 0 8px 4px;
+				color: @coppyTextColor;
+				font: 13px/25px @LucidaGrandeRegular, @familyFont;
+			}
+			&-wrap {
+				position: relative;
+				width: 291px;
+				margin: 0 auto;
+			}
+			input {
+				margin-left: 4px;
+				width: 288px;
+				height: 40px;
+				padding: 8px 42px 8px 13px;
+				color: #000;
+				font: 13px/22px @LucidaGrandeRegular, @familyFont;
+				background-color: transparent;
+				border: 1px solid @borderNavColor;
+				transition: border 0.3s linear;
+				&:focus {
+					border: 1px solid @orangeColor;
+				}
+			}
+			&-btn {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 40px;
+				height: 40px;
+				background-color: transparent;
+				border: none;
+				border-left: 1px solid @borderNavColor;
+				transition: background-color 0.3s linear;
+				cursor: pointer;
+				&:hover {
+					background-color: @orangeColor;
+				}
+				&:before {
+					content: '';
+					position: absolute;
+					top: 13px;
+					left: 14px;
+					display: block;
+					width: 8px;
+					height: 16px;
+					background: url('../img/pngSprite/sprite.png') -90px -95px no-repeat;
+				}
+			}
+		}
+	}
+	&__coppy {
+		padding: 14px 0;
+		text-align: left;
+		background-color: @footerBgCoppyColor;
+		.container {
+			padding: 0 3px;
+		}
+		&-text {
+			color: @coppyTextColor;
+			font: 11px/28px @LucidaGrandeRegular, @familyFont;
+		}
+		&-left {
+			display: inline-block;
+		}
+		&-right {
+			float: right;
+		}
+		&-list {
+			display: inline-block;
+			li {
+				display: inline-block;
+				position: relative;
+				margin-left: 12px;
+				&:before {
+					content: '';
+					position: absolute;
+					bottom: 8px;
+					right: -10px;
+					display: block;
+					background-color: @coppyTextColor;
+					width: 2px;
+					height: 10px;
+				}
+				&:last-child {
+					&:before {
+						content: none;
+					}
+				}
+			}
+			a {
+				color: @coppyTextColor;
+				font: 11px/28px @LucidaGrandeRegular, @familyFont;
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+		}
+
+	}
+}

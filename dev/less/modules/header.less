@@ -1,0 +1,233 @@
+@import '../mixins.less';
+@import '../vars.less';
+
+.header {
+	&__gamburger {
+		position: relative;
+		display: none;
+		height: 26px;
+		width: 30px;
+		margin: 0 auto;
+		cursor: pointer;
+		&:hover {
+			opacity: 0.7;
+		}
+		&.active {
+			.header__gamburger-item--top {
+				transform: rotate(45deg);
+				top: 11px;
+			}
+			.header__gamburger-item--middle {
+				opacity: 0;
+			}
+			.header__gamburger-item--bottom {
+				transform: rotate(-45deg);
+				top: 11px;
+			}
+		}
+		&-item {
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 4px;
+			border-radius: 3px;
+			background-color: @blueColor;
+			&--top {
+				transition: 0.3s linear;
+				top: 0;
+			}
+			&--middle {
+				transition: 0.3s linear;
+				top: 11px;
+			}
+			&--bottom {
+				transition: 0.3s linear;
+				bottom: 0;
+			}
+		}
+	}
+	&__top {
+		padding: 16px 0;
+		margin-bottom: 30px;
+		.container {
+			.clearfix;
+		}
+	}
+	&__logo {
+		position: relative;
+		float: left;
+		a {
+			display: block;
+		}
+		img {
+			display: block;
+			position: absolute;
+			left: -5px;
+		}
+	}
+	&__contacts {
+		float: right;
+		margin-top: 64px;
+		&-text {
+			margin-right: 6px;
+			font: 18px/18px @LucidaGrandeRegular, @familyFont;
+		}
+		&-phone {
+			display: inline-block;
+			margin: 5px 13px 0 0;
+			font: 26px/26px @FuturaMedium, @familyFont;
+			opacity: 1;
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+		&-btn {
+			display: inline-block;
+			vertical-align: top;
+			height: 32px;
+			width: 150px;
+			padding: 9px 11px 8px;
+			margin-right: 2px;
+			border: 1px solid transparent;
+			border-radius: 3px;
+			color: #fff;
+			font: 14px/14px @FuturaLight, @familyFont;
+			background-color: @blueColor;
+			cursor: pointer;
+			text-transform: uppercase;
+			text-align: center;
+			transition: border 0.3s linear, background-color 0.3s linear, color 0.3s linear;
+			&:hover {
+				background-color: #fff;
+				color: @blueColor;
+				border: 1px solid @blueColor;
+			}
+			&:active {
+				background-color: #fff;
+				color: @blueColor;
+				border-bottom: 6px solid @blueColor;
+			}
+		}
+	}
+	&__bottom {
+		position: relative;
+		border-top: 1px solid @borderNavColor;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 4px;
+			height: 1px;
+			width: 100%;
+			background: @borderNavColor;
+		}
+	}
+	&__nav {
+		padding: 17px 0 9px;
+		text-align: center;
+		&-list > {
+			&.active {
+				display: block;
+			}
+			li {
+				position: relative;
+				display: inline-block;
+				margin-right: 2.44%;
+				&:last-child {
+					margin-right: 0;
+				}
+				&:before {
+					content: '';
+					width: 0;
+					height: 4px;
+					transition: width 0.3s linear;
+				}
+				&:hover {
+					&:before {
+						content: '';
+						position: absolute;
+						top: -17px;
+						left: 0;
+						background-color: @blueTextColor;
+						height: 4px;
+						width: 100%;
+					}
+				}
+				&:hover .header__dropdown {
+					left: -2px;
+				}
+			}
+			a {
+				display: block;
+				padding: 11px 0 9px;
+				font: 14px/14px @FuturaLight, @familyFont;
+				color: @grayTextColor;
+				text-transform: uppercase;
+				transition: color 0.3s linear;
+				&:hover {
+					color: @blueTextColor;
+				}
+			}
+		}
+	}
+	&__dropdown {
+		position: absolute;
+		left: -9999px;
+		top: 43px;
+		width: 199px;
+		padding: 22px 0 26.4px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.37);
+		background-color: @blueColor;
+		text-align: left;
+		&:before {
+			content: '';
+			position: absolute;
+			top: -15px;
+			left: 0;
+			width: 100%;
+			height: 32px;
+			background-color: transparent;
+		}
+		li {
+			position: static;
+			width: 100%;
+			margin: 0 0 9px 0;
+			&:before {
+				content: none;
+			}
+			&:hover {
+				&:before {
+					content: none;
+				}
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:hover .dropdown__img {
+				left: 100%;
+			}
+		}
+
+		a {
+			display: block;
+			width: 100%;
+			padding: 0 26px;
+			color: @borderNavColor;
+			font: 14px/14px @FuturaLight, @familyFont;
+			transition: color 0.3s linear;
+			text-transform: none;
+			&:hover {
+				color: @yellowColor;
+			}
+		}
+		.dropdown__img {
+			border-left: 1px solid #fff;
+			position: absolute;
+			left: -9999px;
+			top: 0;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.37);
+			img {
+				display: block;
+			}
+		}
+	}
+}

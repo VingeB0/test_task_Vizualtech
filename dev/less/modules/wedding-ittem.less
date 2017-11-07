@@ -1,0 +1,173 @@
+@import '../vars.less';
+@import '../mixins.less';
+
+.top-banner {
+	background: @grayTextColor url("../img/general/top-banner-bg.jpg") 0 0 no-repeat;
+	background-size: cover;
+	min-height: 233px;
+}
+
+.wedding-item {
+	margin-bottom: 57px;
+	&__top {
+		padding: 21px 0 15px;
+		background-color: @blueColor;
+		.container {
+			padding: 0 6px;
+		}
+	}
+	&__title {
+		font: 35px/35px @FuturaLight, @familyFont;
+		color: #fff;
+		text-transform: uppercase;
+	}
+	&__bottom {
+		.container {
+			.clearfix
+		}
+	}
+	&__left {
+		width: 47%;
+		float: left;
+		padding: 60px 43px 20px 4px;
+		p {
+			margin-bottom: 20px;
+			color: @grayPTextColor;
+			font: 13px/20px @LucidaGrandeRegular, @familyFont;
+			text-align: justify;
+		}
+		a {
+			color: @blueColor;
+			font: 13px/13px @LucidaGrandeBold, @familyFont;
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+	}
+	&__right {
+		float: right;
+		position: relative;
+		width: 53%;
+	}
+	&__slider {
+		margin-top: -135px;
+		margin-right: -6px;
+		border: 9px solid #fff;
+		background-color: #fff;
+		img {
+			width: 673px;
+			height: 548px;
+		}
+	}
+}
+
+.other-wedding {
+	position: relative;
+	padding: 26px 0 20px 0;
+	border-top: 1px solid @borderNavColor;
+	text-align: center;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 4px;
+		left: 0;
+		height: 1px;
+		width: 100%;
+		background: @borderNavColor;
+	}
+	&__item {
+		display: inline-block;
+		max-width: 367px;
+		width: 100%;
+		margin-right: 17px;
+		overflow: hidden;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__title {
+		margin-bottom: 16px;
+		font: 18px/18px @FuturaLight, @familyFont;
+		color: @otherWeddintTitle;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	&__img {
+		position: relative;
+		transition: all 0.3s linear;
+		img {
+			display: block;
+		}
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			background-color: rgba(28,40,91,0.0);
+			transition: all 0.3s linear;
+		}
+		&:hover {
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				background-color: rgba(28,40,91,0.6);
+				transition: all 0.3s linear;
+			}
+		}
+		&:hover .other-wedding__hover {
+			opacity: 1;
+		}
+	}
+	&__hover {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		display: block;
+		padding: 57px 27px 10px 36px;
+		opacity: 0;
+		transition: 0.3s linear;
+	}
+	&__text {
+		position: relative;
+		padding-left: 40px;
+		margin-bottom: 43px;
+		text-align: justify;
+		color: #fff;
+		font: 13px/20px @LucidaGrandeRegular, @familyFont;
+		&:before {
+			content: '';
+			display: block;
+			width: 22px;
+			height: 80px;
+			background: url('../img/pngSprite/sprite.png') 0 0 no-repeat;
+			position: absolute;
+			left: 0;
+			top: -2px;
+		}
+	}
+	&__btn {
+		display: inline-block;
+		padding: 3px 10px;
+		border: 2px solid #fff;
+		font: 14px/25px @FuturaMedium, @familyFont;
+		color: #fff;
+		text-transform: uppercase;
+		transition: 0.3s linear;
+		&:hover {
+			color: #000;
+			background-color: #fff;
+		}
+	}
+}
